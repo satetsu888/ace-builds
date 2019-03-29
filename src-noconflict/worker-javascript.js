@@ -11709,6 +11709,7 @@ var errorsRe = startRegex([
     "Unclosed ",
     "Unmatched ",
     "Unbegun comment",
+    "Unrecoverable",
     "Bad invocation",
     "Missing space after",
     "Missing operator at"
