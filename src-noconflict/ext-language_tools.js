@@ -351,7 +351,6 @@ var SnippetManager = function() {
         editor.forEachSelection(function() {
             self.insertSnippetForSelection(editor, snippetText);
         }, null, {keepOrder: true});
-        
         if (editor.tabstopManager)
             editor.tabstopManager.tabNext();
     };
@@ -744,7 +743,8 @@ var TabstopManager = function(editor) {
             for (var i = ts.length; i--;) {
                 if (ts.hasLinkedRanges && ts[i].linked)
                     continue;
-                sel.addRange(ts[i].clone(), true);
+                if(this.editor.enableMultiselect)
+                    sel.addRange(ts[i].clone(), true);
             }
             if (sel.ranges[0])
                 sel.addRange(sel.ranges[0].clone());
