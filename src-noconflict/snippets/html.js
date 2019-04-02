@@ -150,7 +150,7 @@ snippet width\n\
 	width=\"${1}\"${2}\n\
 # Elements\n\
 snippet a\n\
-	<a href=\"${1:#}\">${2:$1}</a>\n\
+	<a href=\"${1}\">${2}</a>\n\
 snippet a.\n\
 	<a class=\"${1}\" href=\"${2:#}\">${3:$1}</a>\n\
 snippet a#\n\
